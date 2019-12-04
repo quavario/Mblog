@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     re_path(r'^$', views.index_redirect),
+    path('', include('blog.urls')),
 ]
