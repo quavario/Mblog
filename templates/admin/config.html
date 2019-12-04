@@ -1,0 +1,99 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify simpletags %}
+
+{% block extrahead %}{{ block.super }}
+  <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+  {{ media }}
+
+{% endblock %}
+{% block extrastyle %}{{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}"/>{% endblock %}
+{% block content %}
+  <style type="text/css">
+    .inline-group .tabular td.original p {
+      margin-top: -33px;
+    }
+
+    .page-header {
+      padding: 10px;
+    }
+
+  </style>
+  <div id="content-main" class="form-main">
+
+    <el-form ref="form" label-width="80px" label-position="left" action="/test" method="POST">
+      <el-form-item label="博客标题">
+        <el-input v-model="config.blog_title" name="blog_title"></el-input>
+      </el-form-item>
+
+      <el-form-item label="副标题">
+        <el-input type="textarea" :rows="2" v-model="config.blog_subtitle">
+        </el-input>
+      </el-form-item>
+
+      <el-form-item label="底部文字">
+        <el-input v-model="config.bottom_text" name="blog_title"></el-input>
+      </el-form-item>
+
+      <el-button>取消</el-button>
+
+      <el-button type="primary" @click="submit">保存</el-button>
+    </el-form>
+    {#    <form action="/" method="post" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}#}
+    {#      <label for="blog_title">博客标题</label>#}
+    {#      <input name="blog_title" type="text">#}
+    {#    </form>#}
+    {#        {% block object-tools %}#}
+    {#            {% if change %}{% if not is_popup %}#}
+    {#                <ul class="object-tools">#}
+    {#                    {% block object-tools-items %}#}
+    {#                        <li>#}
+    {#                            <el-dialog title="{% trans "History" %}" :visible.sync="dialogTableVisible">#}
+    {#                                <iframe frameborder="0" :src="url" width="100%" height="300"></iframe>#}
+    {#                            </el-dialog>#}
+    {#                            {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}#}
+    {##}
+    {#                            <el-button @click="go_url('{% add_preserved_filters history_url %}')" class="historylink"#}
+    {#                                       icon="fas fa-history">{% trans "History" %}</el-button>#}
+    {#                        </li>#}
+    {#                        {% if has_absolute_url %}#}
+    {#                            <li>#}
+    {#                                <el-button @click="window.open('{{ absolute_url }}')" class="viewsitelink" icon="fas fa-globe-asia">{% trans "View on site" %}</el-button>#}
+    {#                            </li>#}
+    {#                        {% endif %}#}
+    {#                    {% endblock %}#}
+    {#                </ul>#}
+    {#            {% endif %}{% endif %}#}
+    {#        {% endblock %}#}
+
+
+  </div>
+  <script type="text/javascript">
+      new Vue({
+          el: '#content-main',
+          data: function () {
+              return {
+                  visible: false, config: {'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    blog_title: '{{ blog_title }}', blog_subtitle: '{{ blog_subtitle }}', bottom_text: '{{ bottom_text }}'
+                  },
+              }
+          },
+          methods: {
+              submit: function ($event) {
+                  $.ajax({
+                      type: 'POST',
+                      url: '/blog/config/update',
+                      data: this.config,
+                      success: function (res) {
+                          console.log(res);
+                      }
+                  })
+              }
+          }
+      });
+
+      function submit() {
+          console.log()
+      }
+  </script>
+{% endblock %}
