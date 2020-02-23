@@ -81,3 +81,15 @@ def config_update(request):
         db_blog_title.save()
         db_bottom_text.save()
         return HttpResponse('success')
+
+
+def link_config(request):
+    context = {}
+    return render(request, 'admin/link_config.html', context)
+
+
+def link_config_update(request):
+    if request.POST:
+        wei_url = request.POST['weibo_url']
+        github_url = request.POST['github_url']
+        facebook_url = request.POST['facebook_url']

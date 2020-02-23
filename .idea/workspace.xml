@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b54ee063-2c39-4620-bd1c-f910d407edab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/link_config.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mblog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,17 +30,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="m_blog: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -61,11 +54,12 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\quam\PycharmProjects\Mblog\templates\admin" />
       <recent name="C:\Users\quam\PycharmProjects\Mblog\blog" />
       <recent name="C:\Users\quam\PycharmProjects\Mblog\blog\static" />
       <recent name="C:\Users\quam\PycharmProjects\Mblog\templates" />
@@ -120,7 +114,13 @@
       <option name="presentableId" value="Default" />
       <updated>1575340626071</updated>
       <workItem from="1575340647679" duration="17437000" />
-      <workItem from="1575421007866" duration="16446000" />
+      <workItem from="1575421007866" duration="19272000" />
+      <workItem from="1575506384163" duration="4000" />
+      <workItem from="1578618361896" duration="1097000" />
+      <workItem from="1579054621680" duration="4000" />
+      <workItem from="1580786842391" duration="4000" />
+      <workItem from="1580893837961" duration="4000" />
+      <workItem from="1581642567766" duration="739000" />
     </task>
     <servers />
   </component>
@@ -157,7 +157,9 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

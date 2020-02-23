@@ -28,7 +28,8 @@ urlpatterns = [
     path('index', views.index),
     path('config', views.config),
     path('config/update', views.config_update),
+    path('link_config', views.link_config),
+    path('link_config/update', views.link_config_update),
     path('ckeditor', include('ckeditor_uploader.urls')),
 
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

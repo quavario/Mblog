@@ -172,6 +172,10 @@ SIMPLEUI_CONFIG = {
                 'name': '设置',
                 'url': '/blog/config',
                 'icon': 'far fa-surprise'
+            }, {
+                'name': '标签',
+                'url': '/blog/link_config',
+                'icon': 'far fa-surprise'
             }]
         },
         ]

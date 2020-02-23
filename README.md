@@ -2,6 +2,14 @@
 🍺 基于Django 3.0和python 3.7的博客系统
 
 ## 安装
+下载源码
+
+```bash
+git clone https://github.com/quavario/Mblog.git
+```
+
+
+
 安装 Django 3.0
 
 ```
